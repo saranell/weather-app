@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3507acf7ca.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather App</title> 
   </head>
+
   <body>
-    hello
+    <div class="container">
+    <div class="weather-app">
+      <form class="search-form" id="search-form">
+        <div class="row">
+          <div class="col-6">
+        <input type="search" placeholder="Enter a city" autofocus="on" id="city-input"class="form-control shadow-sm"/>
+      </div>
+      <div class="col-3">
+        <button type="button" class="form-control btn btn-primary shadow-sm w-100">Search</button>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-success" id="current-location-button">Current</button>
+      </div>
+        <h1>
+        <span id="city">St. Louis, MO</span>
+        <br />
+        Currently <span class="temperature" id="temperature"></span><span class="units">°F</span>
+        <br />
+        <span id="date"></span>
+        <div><i class="fas fa-cloud current-pic"></i></div>
+      </h1>
+      <h2>
+        <ul>
+          <li>Precipitation 34%</li>
+          <li>Humidity <span id="humidity">81</span>%</li>
+          <li>Wind <span id="wind">10</span>mph</li>
+          <li>
+            Sunrise 7:17 AM
+          </li>
+          <li>
+            Sunset 5:05 PM
+          </li>
+        </ul>
+      </h2>
+      <h4>Day Details</h4>
+      <p>The skies will be cloudy. The high will be 38°. Low will be 31°.</p>
+
+      <section class="forecast">
+        <h3>Hourly forecast</h3>
+        <div class="row">
+          <div class="col">1PM</div>
+          <div class="col">2PM</div>
+          <div class="col">3PM</div>
+          <div class="col">4PM</div>
+          <div class="col">5PM</div>
+          <div class="col">6PM</div>
+        </div>
+        <div class="row">
+          <div class="col">37°</div>
+          <div class="col">37°</div>
+          <div class="col">37°</div>
+          <div class="col">36°</div>
+          <div class="col">35°</div>
+          <div class="col">34°</div>
+        </div>
+        <br />
+        <h3>Daily forecast</h3>
+        <div class="row text-center">
+          <div class="col">Sat 16</div>
+          <div class="col">Sun 17</div>
+          <div class="col">Mon 18</div>
+          <div class="col">Tue 19</div>
+          <div class="col">Wed 20</div>
+          <div class="col">Thu 21</div>
+        </div>
+        <div class="row text-center">
+          <div class="col"><i class="fas fa-cloud"></i></div>
+          <div class="col"><i class="fas fa-cloud-sun"></i></div>
+          <div class="col"><i class="fas fa-cloud-rain"></i></div>
+          <div class="col"><i class="fas fa-cloud-sun"></i></div>
+          <div class="col"><i class="fas fa-cloud-sun"></i></div>
+          <div class="col"><i class="fas fa-cloud-sun"></i></div>
+        </div>
+        <div class="row text-center">
+          <div class="col"><b> 38° </b> 31°</div>
+          <div class="col"><b> 36° </b> 31°</div>
+          <div class="col"><b> 45° </b> 32°</div>
+          <div class="col"><b> 41° </b> 26°</div>
+          <div class="col"><b> 48° </b> 40°</div>
+          <div class="col"><b> 50° </b> 31°</div>
+        </div>
+      </section>
+    </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
