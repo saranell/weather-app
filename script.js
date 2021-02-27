@@ -17,6 +17,7 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   document.querySelector("#sunrise").innerHTML = response.data.sunrise;
+  document.querySelector("#sunset").innerHTML = response.data.sunset;
 }
 
 function searchCity(city) {
