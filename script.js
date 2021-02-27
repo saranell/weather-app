@@ -4,6 +4,9 @@ let hours = currentTime.getHours();
 let minutes = currentTime.getMinutes();
 let dayIndex = currentTime.getDay();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let sunrise = document.querySelector("#sunrise");
+let sunset = document.querySelector("#sunset");
+let description = document.querySelector("#description");
 
 dateElement.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
@@ -16,8 +19,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#sunrise").innerHTML = response.data.sunrise;
-  document.querySelector("#sunset").innerHTML = response.data.sunset;
+  document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
+  document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
 }
 
 function searchCity(city) {
