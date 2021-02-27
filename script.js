@@ -16,6 +16,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#sunrise").innerHTML = response.data.sunrise;
 }
 
 function searchCity(city) {
