@@ -7,7 +7,7 @@ let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let sunrise = document.querySelector("#sunrise");
 let sunset = document.querySelector("#sunset");
 let description = document.querySelector("#description");
-
+description.innerHTML = response.data.weather.description;
 dateElement.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
