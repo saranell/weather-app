@@ -11,7 +11,6 @@ let iconElement = document.querySelector("#icon");
 
 dateElement.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
-console.log(response.data);
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -30,6 +29,7 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+  console.log(response.data);
 }
 
 function searchCity(city) {
