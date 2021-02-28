@@ -7,6 +7,7 @@ let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let sunrise = document.querySelector("#sunrise");
 let sunset = document.querySelector("#sunset");
 let humidity = document.querySelector("#humidity");
+let iconElement = document.querySelector("#icon");
 
 descriptionElement.innerHTML = response.data.weather[0].description;
 dateElement.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
@@ -23,6 +24,10 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
   document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/10d@2x.png`
+  );
 }
 
 function searchCity(city) {
