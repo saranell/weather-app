@@ -4,8 +4,6 @@ let hours = currentTime.getHours();
 let minutes = currentTime.getMinutes();
 let dayIndex = currentTime.getDay();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let sunrise = document.querySelector("#sunrise");
-let sunset = document.querySelector("#sunset");
 let humidity = document.querySelector("#humidity");
 let iconElement = document.querySelector("#icon");
 
