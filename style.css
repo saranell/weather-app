@@ -37,7 +37,9 @@ html {
 .search-form {
   margin-bottom: 20px;
 }
-
+.description {
+  text-transform: capitalize;
+}
 .forecast {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
