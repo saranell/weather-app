@@ -38,10 +38,6 @@ html {
   margin-bottom: 20px;
 }
 
-.current-pic {
-  display: block;
-  font-size: 80px;
-}
 .forecast {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
