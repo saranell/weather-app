@@ -25,7 +25,6 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-  console.log(response.data);
 }
 
 function searchCity(city) {
@@ -37,7 +36,7 @@ function searchCity(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
-  search(city.InputElement.value);
+  search(cityInputElement.value);
 }
 
 function searchLocation(position) {
