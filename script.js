@@ -6,6 +6,8 @@ let dayIndex = currentTime.getDay();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let humidity = document.querySelector("#humidity");
 let iconElement = document.querySelector("#icon");
+let tempMax = document.querySelector("#temp_max");
+let tempMin = document.querySelector("#temp_min");
 
 dateElement.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
@@ -25,6 +27,12 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+  document.querySelector("temp_max").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector("temp_min").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
 }
 
 function search(city) {
