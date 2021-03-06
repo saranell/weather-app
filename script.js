@@ -38,25 +38,17 @@ function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
   cityElement.innerHTML = response.data.name;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   descriptionElement.innerHTML = response.data.weather[0].description;
-  document.querySelector("temp_max").innerHTML = Math.round(
-    response.data.main.temp_max
-  );
-  document.querySelector("temp_min").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
+  tempMaxElement.innerHTML = Math.round(response.data.main.temp_max);
+  tempMinElement.innerHTML = Math.round(response.data.main.temp_min);
 }
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
