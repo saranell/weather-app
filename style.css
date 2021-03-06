@@ -18,7 +18,9 @@ body {
   background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
 }
 img {
-  margin-top: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 html {
   min-height: 100%;
@@ -36,10 +38,6 @@ html {
 }
 .description {
   text-transform: capitalize;
-}
-.icon {
-  display: block;
-  margin: 0 auto;
 }
 .weather-forecast {
   margin-top: 10px;
