@@ -49,7 +49,6 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
   descriptionElement.innerHTML = response.data.weather[0].description;
   document.querySelector("temp_max").innerHTML = Math.round(
     response.data.main.temp_max
@@ -89,7 +88,6 @@ function search(city) {
   let apiKey = "2c65ee63631088d8b35830f963cef245";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeatherCondition);
-
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
