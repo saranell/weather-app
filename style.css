@@ -20,7 +20,7 @@ ul {
   list-style: none;
 }
 body {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 img {
   margin-top: 70px;
@@ -29,7 +29,7 @@ html {
   min-height: 100%;
 }
 .weather-app {
-  border: 1px solid #dadde1;
+  border: 1px solid #8b9096;
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
