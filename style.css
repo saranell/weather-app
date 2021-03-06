@@ -40,7 +40,8 @@ html {
 .description {
   text-transform: capitalize;
 }
-.forecast {
+.weather-forecast {
+  margin-top: 18px;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   text-align: center;
