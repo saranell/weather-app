@@ -41,10 +41,18 @@ html {
   text-transform: capitalize;
 }
 .weather-forecast {
-  margin-top: 18px;
+  margin-top: 10px;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   text-align: center;
+}
+.weather-forecast h3 {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
 }
 .weather-forecast img {
   display: block;
