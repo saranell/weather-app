@@ -67,11 +67,12 @@ html {
   line-height: 15px;
   white-space: nowrap;
 }
-
 a:link {
   text-decoration: none;
-  text-align: center;
 }
 a:hover {
   text-decoration: underline;
+}
+.coded-by {
+  text-align: center;
 }
